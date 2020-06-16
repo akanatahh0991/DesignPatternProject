@@ -1,0 +1,30 @@
+@startuml
+
+class Player {
+strategy: Strategy
+nextHand(): Hand
+win(): void
+lose(): void
+even(): void
+}
+
+interface Strategy {
+{abstract} nextHand(): Hand
+{abstract} study(boolean): void
+}
+
+class WinningStrategy {
+nextHand(): Hand
+study(boolean): void
+}
+
+class ProbStrategy {
+nextHand(): Hand
+study(boolean): void
+}
+
+Player o- Strategy
+Strategy <|.. WinningStrategy
+Strategy <|.. ProbStrategy
+
+@enduml
