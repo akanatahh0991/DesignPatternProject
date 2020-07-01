@@ -1,12 +1,13 @@
 package observer
 
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
+
 class DigitObserver: Observer {
     override fun update(generator: NumberGenerator) {
         println("DigitObserver: " + generator.getPresentNumber())
-        try {
-            Thread.sleep(100)
-        } catch (e: InterruptedException) {
-            // 何もしない
+        runBlocking {
+            delay(100L)
         }
     }
 }

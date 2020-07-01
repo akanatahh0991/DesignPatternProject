@@ -1,5 +1,8 @@
 package observer
 
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
+
 class GraphObserver: Observer {
     override fun update(generator: NumberGenerator) {
         print("GraphObserver: ")
@@ -7,10 +10,9 @@ class GraphObserver: Observer {
             print("*")
         }
         println("")
-        try {
-            Thread.sleep(100)
-        } catch (e: InterruptedException) {
-            // 何もしない
+
+        runBlocking {
+            delay(100L)
         }
     }
 }
