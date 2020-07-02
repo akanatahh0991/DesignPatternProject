@@ -5,12 +5,7 @@ import kotlinx.coroutines.runBlocking
 
 class GraphObserver: Observer {
     override fun update(generator: NumberGenerator) {
-        print("GraphObserver: ")
-        for (i in 0 .. generator.getPresentNumber()) {
-            print("*")
-        }
-        println("")
-
+        println("GraphObserver: " + "*".repeat(generator.getPresentNumber()))
         runBlocking {
             delay(100L)
         }

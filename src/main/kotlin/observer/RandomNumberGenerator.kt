@@ -6,7 +6,7 @@ class RandomNumberGenerator: NumberGenerator() {
 
     override fun execute() {
         for (i in 1 .. 20) {
-            number = (1..50).random()
+            number = (0 until 50).random()
             notifyObservers()
         }
     }
