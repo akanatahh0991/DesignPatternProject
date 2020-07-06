@@ -5,7 +5,7 @@ import kotlinx.coroutines.runBlocking
 
 class DigitObserver: Observer {
     override fun update(generator: NumberGenerator) {
-        println("DigitObserver: " + generator.getPresentNumber())
+        println("DigitObserver: " + generator.getNumber())
         runBlocking {
             delay(100L)
         }

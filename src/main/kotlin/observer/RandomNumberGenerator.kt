@@ -2,7 +2,7 @@ package observer
 
 class RandomNumberGenerator: NumberGenerator() {
     private var number: Int = 0
-    override fun getPresentNumber(): Int = number
+    override fun getNumber(): Int = number
 
     override fun execute() {
         for (i in 1 .. 20) {
