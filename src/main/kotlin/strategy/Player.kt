@@ -1,6 +1,6 @@
 package strategy
 
-class Player(val name: String, val strategy: Strategy) {
+class Player(private val name: String, private val strategy: Strategy) {
     private var winCount = 0
     private var loseCount = 0
     private var gameCount = 0
