@@ -1,7 +1,7 @@
 package strategy
 
 class ProbStrategy: Strategy {
-    private var history = Array(3){ IntArray(3){ 1 } }
+    private val history = Array(3){ IntArray(3){ 1 } }
     private var prevHandValue: Int = 0
     private var currentHandValue: Int = 0
 
