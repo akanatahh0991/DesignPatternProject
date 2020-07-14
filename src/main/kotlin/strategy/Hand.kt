@@ -27,6 +27,4 @@ enum class Hand(val handValue: Int){
         // 負け
         else -> -1
     }
-
-
 }
